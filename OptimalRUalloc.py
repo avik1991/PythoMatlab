@@ -111,6 +111,8 @@ def GetAllocationIndex(ruAllocArray):
     elif len(ruAllocArray)==5:
         if ruAllocArray[2]==1 and ruAllocArray[0]==2 and ruAllocArray[4]==2:
             allocationIndexStr="00001111"
+    import webbrowser
+    webbrowser.open('https://i.imgur.com/FVldYF4.png')
     return allocationIndexStr;
 
 def createMatlabFrame(ruVec_,Tx_t_,BW_,mcs_,data_):
@@ -145,7 +147,8 @@ def OptimalRuAllocAl(clients,f,F,R):
            f.write(t.__str__()+","+(sum(tpadding)/n).__str__()+"\n")
            f.close()
            tx_signal=createMatlabFrame(ruVector,int(t*1000000),'CBW20',3,clients)
-
+           
+           
            return (t,(sum(tpadding)/n))
            break;
 
